@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- linking the css here -->
+    <link rel="stylesheet" type="text/css" href="Assets/style.css"/>
+</head>
+<body>
+    <!-- the header box, inluding the page title and search bar and submit button -->
+    <header class="header-bar">
+        <div class="heading-image">
+            <h1>Weather Forecast</h1>
+        </div>
+        <form action="" class="citySubmit">
+            <div class="input-container">
+                <input id="cityInput" type="text" placeholder="Search cities">
+                <div class="button-column">
+                    <button class="submitbtn" id="submitbtn" type="submit">Submit</button>
+                    <div class="dropdown">
+                        <button id="history" class="historybtn">History</button>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <ul></ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </header>
+
+    <!-- the box to display all current weather data -->
+    <div id="current-weather" class="current-weather">
+        <div class="current-heading">
+            <h3 id="current_date">
+                <script>
+                    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+                    document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('en-US', options);
+                </script>             
+            </h3>
+            <h3 id="current_head_city"></h3>
+            <img id="icon">
+        </div>
+        <div class="current-weather-box">
+            <div id="current-cloud" class="current-cloudy"></div>
+            <div id="current-temp" class="current-temperature"></div>
+            <div id="current-humid" class="current-humidity"></div>
+            <div id="current-wind" class="current-wind-speed"></div>
+        </div>
+    </div>
+
+    <!-- the box to display all future weather data -->
+    <div class="future-weather">
+        <h2>5-day Forecast</h2>
+        <div class="five-days">
+            <div class="day-1">
+                <h3>Day 1</h3>
+                <div id="day-1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="day-2">
+                <h3>Day 2</h3>
+                <div id="day-2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="day-3">
+                <h3>Day 3</h3>
+                <div id="day-3">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="day-4">
+                <h3>Day 4</h3>
+                <div id="day-4">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="day-5">
+                <h3>Day 5</h3>
+                <div id="day-5">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- linking the javascript here -->
+    <script src="./Assets/script.js"></script>
+</body>
+</html>
